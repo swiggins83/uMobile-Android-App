@@ -50,7 +50,7 @@
         </service>
         <provider
             android:name="org.apereo.utils.StubProvider"
-            android:authorities="org.apereo.umobile.datasync.provider"
+            android:authorities="@string/account_content_authority"
             android:exported="false"
             android:syncable="false" >
         </provider>

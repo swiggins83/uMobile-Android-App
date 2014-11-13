@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/image_view"
                 android:background="@drawable/ou_header_transparent"
-                android:contentDescription="@string/umobile_header"
+                android:contentDescription="@string/ou_header"
                 android:padding="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="50dp" />
