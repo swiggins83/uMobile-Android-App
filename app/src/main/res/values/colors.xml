@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item name="theme_accent" type="color">#FF8800</item>
-    <item name="theme_light" type="color">#6288C4</item>
-    <item name="theme_dark" type="color">#4D6DB5</item>
+    <item name="theme_primary" type="color">#B59A57</item>
+    <item name="theme_primary_light" type="color">#BCA467</item>
+    <item name="theme_primary_dark" type="color">#907B45</item>
+    <item name="theme_secondary" type="color">#000000</item>
 
 </resources>

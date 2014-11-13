@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.ListFragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,15 +16,14 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EFragment;
 import org.apache.commons.lang.StringUtils;
 import org.apereo.App;
+import org.apereo.R;
 import org.apereo.adapters.PortletListAdapter;
 import org.apereo.constants.AppConstants;
 import org.apereo.interfaces.IActionListener;
 import org.apereo.models.Portlet;
 import org.apereo.utils.LayoutManager;
-import java.util.List;
 
-import org.apereo.R;
-import org.apereo.utils.Logger;
+import java.util.List;
 
 @EFragment(R.layout.activity_listview)
 public class HomePageListFragment extends ListFragment {
@@ -80,20 +78,17 @@ public class HomePageListFragment extends ListFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        int actionBarBg = R.drawable.ab_background;
-
         mArguments = getArguments();
 
         mFadingHelper = new FadingActionBarHelper()
-                .actionBarBackground(actionBarBg)
+                .actionBarBackground(R.color.theme_primary)
                 .headerLayout(R.layout.header)
                 .contentLayout(R.layout.activity_listview);
         mFadingHelper.initActionBar(activity);
 
         this.activity = activity;
-
-
     }
+
     public void update(int resourseId) {
         portlets = layoutManager.getLayout().getFolders().get(position).getPortlets();
         adapter.notifyDataSetChanged();
